@@ -27,4 +27,4 @@ Django ORM Operations Done
 
 File Location:
 Folder: Django ORM Operations
-File: Django ORM Operations.png/Django ORM Operations1.png
+File: Django ORM Operations.png/Django ORM Operations 2.png
