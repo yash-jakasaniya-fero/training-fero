@@ -1,0 +1,118 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Alice",
+        "email": "alice@example.com",
+        "dob": "1990-05-10",
+        "address": {
+          "street": "123 Elm St",
+          "city": "Wonderland",
+          "postal_code": "12345"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Bob",
+        "email": "bob@example.com",
+        "dob": "1985-08-20",
+        "address": {
+          "street": "456 Maple Ave",
+          "city": "Fictionville",
+          "postal_code": "67890"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Charlie",
+        "email": "charlie@example.com",
+        "dob": "1992-11-15",
+        "address": {
+          "street": "789 Oak Rd",
+          "city": "Storytown",
+          "postal_code": "13579"
+        }
+      }
+    ],
+    "orders": [
+      {
+        "order_id": "ORD001",
+        "user_id": 1,
+        "order_date": "2025-01-10",
+        "total": 250.50,
+        "items": [
+          {
+            "product_id": "P001",
+            "name": "Laptop",
+            "price": 200,
+            "quantity": 1
+          },
+          {
+            "product_id": "P003",
+            "name": "Mouse",
+            "price": 50.50,
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "order_id": "ORD002",
+        "user_id": 2,
+        "order_date": "2025-01-12",
+        "total": 300,
+        "items": [
+          {
+            "product_id": "P002",
+            "name": "Smartphone",
+            "price": 300,
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "order_id": "ORD003",
+        "user_id": 3,
+        "order_date": "2025-01-15",
+        "total": 150,
+        "items": [
+          {
+            "product_id": "P004",
+            "name": "Keyboard",
+            "price": 150,
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "products": [
+      {
+        "product_id": "P001",
+        "name": "Laptop",
+        "category": "Electronics",
+        "price": 200,
+        "stock": 50
+      },
+      {
+        "product_id": "P002",
+        "name": "Smartphone",
+        "category": "Electronics",
+        "price": 300,
+        "stock": 30
+      },
+      {
+        "product_id": "P003",
+        "name": "Mouse",
+        "category": "Accessories",
+        "price": 50.50,
+        "stock": 100
+      },
+      {
+        "product_id": "P004",
+        "name": "Keyboard",
+        "category": "Accessories",
+        "price": 150,
+        "stock": 75
+      }
+    ]
+  }
+  

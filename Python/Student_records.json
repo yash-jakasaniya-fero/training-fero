@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "A",
+        "Branch": "CE",
+        "Year": "1",
+        "CGPA": "8.6"
+    },
+    {
+        "Name": "B",
+        "Branch": "IT",
+        "Year": "3",
+        "CGPA": "7.8"
+    },
+    {
+        "Name": "C",
+        "Branch": "ME",
+        "Year": "2",
+        "CGPA": "5.1"
+    },
+    {
+        "Name": "X",
+        "Branch": "CE",
+        "Year": "4",
+        "CGPA": "9.0"
+    },
+    {
+        "Name": "Y",
+        "Branch": "IT",
+        "Year": "1",
+        "CGPA": "7.1"
+    },
+    {
+        "Name": "Z",
+        "Branch": "ME",
+        "Year": "4",
+        "CGPA": "8.3"
+    }
+]
