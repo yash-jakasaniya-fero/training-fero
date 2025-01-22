@@ -21,3 +21,10 @@ Modify class attributes and methods to test functionality.
 File Location:
 Folder: python
 File: OOP.ipynb
+
+
+Django ORM Operations Done
+
+File Location:
+Folder: Django ORM Operations
+File: Django ORM Operations.png/Django ORM Operations1.png
