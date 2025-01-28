@@ -6,7 +6,8 @@ This repository contains both basic and advanced Python concepts, including Obje
 1. [Basic Python Concepts](#basic-python-concepts)
 2. [Advanced Python Concepts](#advanced-python-concepts)
 3. [Object-Oriented Programming (OOP) in Python](#object-oriented-programming-oop-in-python)
-4. [Requirements](#requirements)
+4. [Django ORM Operations](#django-orm-operations)
+5. [Requirements](#requirements)
 
 ---
 
@@ -66,7 +67,7 @@ First, ensure you have a Django project set up. If not, create a new project wit
 ```bash
 django-admin startproject myproject
 
-## Requirements
+## **Requirements**
 
 - Python 3.8 or higher.
 - Django (install via `pip install django`).
