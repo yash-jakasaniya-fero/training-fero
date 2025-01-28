@@ -58,7 +58,14 @@ This section demonstrates key Object-Oriented Programming (OOP) concepts in Pyth
 
 ## Django ORM Operations
 
-This section demonstrates how to use Django ORM for database operations.
+This project demonstrates how to use Django ORM for database operations.
+
+## **Requirements**
+
+- Python 3.8 or higher.
+- Django (install via `pip install django`).
+- Database:
+  - Default: SQLite (no additional setup needed).
 
 ### 1. Setting Up Django Project
 
@@ -67,11 +74,3 @@ First, ensure you have a Django project set up. If not, create a new project wit
 ```bash
 django-admin startproject myproject
 
----
-
-## **Requirements**
-
-- Python 3.8 or higher.
-- Django (install via `pip install django`).
-- Database:
-  - Default: SQLite (no additional setup needed).
