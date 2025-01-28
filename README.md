@@ -67,6 +67,8 @@ First, ensure you have a Django project set up. If not, create a new project wit
 ```bash
 django-admin startproject myproject
 
+---
+
 ## **Requirements**
 
 - Python 3.8 or higher.
