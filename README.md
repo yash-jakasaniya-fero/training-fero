@@ -1,30 +1,23 @@
-# training-fero
-OOPs in Python
-This notebook demonstrates key Object-Oriented Programming (OOP) concepts in Python.
+# Training-Fero
 
-Concepts Covered:
-Data Structures: Lists, Tuples, Dictionaries
-Classes & Objects: Creating and using classes
-Encapsulation: Using private attributes and getters/setters
-Inheritance: Reusing code with subclasses
-Polymorphism: Overriding methods
-Abstraction: Abstract classes and methods
+This repository contains both basic and advanced Python concepts, including Object-Oriented Programming (OOP) demonstrations.
 
-Requirements:
-Python 3.8 (latest version)
-No external libraries needed (only math which is built-in)
-
-How to Use:
-Run the code snippets to explore each OOP concept.
-Modify class attributes and methods to test functionality.
-
-File Location:
-Folder: python
-File: OOP.ipynb
+## Table of Contents
+1. [Basic Python Concepts](Python/README.md#basic-python-concepts)
+2. [Advanced Python Concepts](Python/README.md#advanced-python-concepts)
+3. [Object-Oriented Programming (OOP) in Python](Python/README.md#object-oriented-programming-oop-in-python)
+4. [Django ORM Operations](Django%20ORM%20Operations/README.md#django-orm-operations)
 
 
-Django ORM Operations Done
+---
 
-File Location:
-Folder: Django ORM Operations
-File: Django ORM Operations.png/Django ORM Operations 2.png
+
+## **Requirements**
+
+- Python 3.8 or higher.
+- Django (install via `pip install django`).
+- Database:
+  - Default: SQLite (no additional setup needed).
+
+
+
