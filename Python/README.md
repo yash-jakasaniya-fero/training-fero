@@ -1,22 +1,21 @@
 ## Basic Python Concepts
 
-1. **Variables, Booleans and None**
-2. **Using Functions**
-3. **Setting Up an Editor**
-4. **If, Else and Elif**
-5. **Handy Stuff with Strings**
-6. **Lists and Tuples**
-7. **Loops**
-8. **Zip and Enumerate**
-9. **Dictionaries**
-10. **Defining Functions**
-11. **Writing a Larger Program**
-12. **What is True?**
-13. **Files**
-14. **Modules**
-15. **Exceptions**
-16. **Classes**
-17. **Docstrings**
+1. **Variables, Booleans and None**  
+2. **Using Functions**  
+3. **If, Else and Elif**  
+4. **Handy Stuff with Strings**  
+5. **Lists and Tuples**  
+6. **Loops**  
+7. **Zip and Enumerate**  
+8. **Dictionaries**  
+9. **Defining Functions**  
+10. **Writing a Larger Program**  
+11. **What is True?**  
+12. **Files**  
+13. **Modules**  
+14. **Exceptions**  
+15. **Classes**  
+16. **Docstrings**  
 
 ---
 
