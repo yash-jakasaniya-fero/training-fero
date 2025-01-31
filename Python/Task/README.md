@@ -1,0 +1,1 @@
+This Python script processes a log file (tracking_log.txt) and uses argparse for command-line arguments to either display the top "n" users with the highest requests or show how many requests a specific user has sent. It supports both functions dynamically based on user input.
