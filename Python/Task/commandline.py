@@ -39,12 +39,21 @@ def main():
     match_counts = count_matches(matches)
 
 
-    if args.user:
-        client_name = get_client_name(match_counts, args.user)
-        print(f'{args.user} sent {client_name} request.')
-    else:
-        top_n = get_top_matches(match_counts, args.c)
-        print(dict(top_n))
+    try:
+        if args.user is not None:
+            if not args.user.strip():
+                raise ValueError("You need to enter a user name after '-user'.")
+            client_name = get_client_name(match_counts, args.user)
+            print(f'{args.user} sent {client_name} request.')
+        elif args.c is not None:
+            if args.c <= 0:
+                raise ValueError("You need to enter a positive integer after '-c'.")
+            top_n = get_top_matches(match_counts, args.c)
+            print(dict(top_n))
+        else:
+            raise ValueError("You need to provide either '-user' or '-c' with appropriate values.")
+    except ValueError as e:
+        print(f"Error: {e}")
 
 
 if __name__ == '__main__':
