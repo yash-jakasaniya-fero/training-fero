@@ -137,7 +137,6 @@ def total_requests_for_user(user, total):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-user', help='Specify a user to track')
     parser.add_argument('-u', help='Total request of a particular user')
     parser.add_argument('-c', type=int, help='Number of top users to find')
     parser.add_argument('-t', type=int, help='Time block duration in hours')
@@ -170,20 +169,21 @@ def main():
                 for user, count in data:
                     print(f"{user}: {count} requests")
 
-        elif args.user:
-            if not args.user.strip():
-                raise ValueError("You need to enter a user name after '-user'.")
-            user = args.user
-            content = read_file()
-            gap = timedelta(hours=args.t) if args.t else timedelta(hours=1)
-            track_user_requests(user, gap, content)
+        if args.u:
+            user = args.u.strip()
+            if not user:
+                raise ValueError("You need to enter a user name after '-u'.")
 
-        elif args.u:
-            if not args.u.strip():
-                raise ValueError("You need to specify a valid user for '-u'.")
-            user = args.u
             content = read_file()
-            total_requests = total_requests_for_user(user, content)
+
+            if args.t:
+                gap = timedelta(hours=args.t)
+                track_user_requests(user, gap, content)
+                if args.g:
+                    plot_data(intervals)
+            else:
+                total_requests = total_requests_for_user(user, content)
+
             if total_requests == 0:
                 print(f"{user} has no requests in the log.")
             else:
