@@ -1,6 +1,7 @@
 from django.db import models
 
 class Manufacturer(models.Model):
+    objects = None
     name = models.CharField(max_length=120)
     location = models.CharField(max_length=120)
     active = models.BooleanField(default=True)
@@ -9,6 +10,7 @@ class Manufacturer(models.Model):
         return self.name
 
 class Product(models.Model):
+    objects = None,
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, related_name="products")
     name = models.CharField(max_length=120)
     description = models.TextField(blank=True, null=True)
