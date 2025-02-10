@@ -12,23 +12,32 @@
 - Views
   - HTML views
   - JSON views
-  - class based views
-  - function based views
-- Templates [Frontend HTML]
-  - Products List
-  - Products Details
+  - Class Based views
+  - Function Based views
+- Templates(Frontend HTML)
+  - Product list
+  - Details list
 - URL
-  - /admin
-  - /api
+  - Admin
+  - API
 
 ### Project Development Steps
 
-- Create Django Project
+- Create-Project
 - Define database models
-- Register Models in admin
+- Make Migration
+- Make Migrate
+- Make superuser
+- Register models in Admin
 - Create views
 - HTML views(class based view)
 - JSON views(function based view)
-- define URLS
-- create templates
-- run the project
+- Define URLS
+- Create templates
+- Run the project
+
+### Requirements
+- **django==4.2**
+- **djangorestframework==3.15.2**
+- **pillow**
+- **django-extensions**
