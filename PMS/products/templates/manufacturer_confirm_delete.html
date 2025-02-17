@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Delete Manufacturer</title>
+    <title>Confirm Manufacturer Deletion</title>
 </head>
 <body>
-    <h2>Confirm Deletion</h2>
-    <p>Are you sure you want to delete <strong>{{ manufacturer.name }}</strong>?</p>
-
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" style="color: red;">Yes, Delete</button>
-        <a href="{% url 'manufacturer_list' %}">Cancel</a>
-    </form>
+    <h1>Confirm Manufacturer Deletion</h1>
+    <table border="1">
+        <tr>
+            <td>Are you sure you want to delete {{ manufacturer.name }}?</td>
+        </tr>
+        <tr>
+            <td>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="Confirm">
+                </form>
+            </td>
+            <td><a href="/api/manufacturers/">Cancel</a></td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -1,7 +1,23 @@
-<h1>Confirm Delete</h1>
-<p>Are you sure you want to delete {{ object.name }}?</p>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Yes, Delete</button>
-</form>
-<a href="{% url 'manufacturer_list' %}">Cancel</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Delete</title>
+</head>
+<body>
+    <h1>Confirm Product Deletion</h1>
+    <table border="1">
+        <tr>
+            <td>Are you sure you want to delete {{ product.name }}?</td>
+        </tr>
+        <tr>
+            <td>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="Confirm">
+                </form>
+            </td>
+            <td><a href="/api/products/">Cancel</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,6 +1,32 @@
-<h1>{% if object %}Edit{% else %}Add{% endif %} Manufacturer</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manufacturer Form</title>
+</head>
+<body>
+    <h1>Create or Update Manufacturer</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table border="1">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="{{ manufacturer.name }}"></td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td><input type="text" name="location" value="{{ manufacturer.location }}"></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td><input type="checkbox" name="active" {% if manufacturer.active %} checked {% endif %}></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </table>
+        <a href="/api/manufacturers/">Cancel</a>
+    </form>
+</body>
+</html>

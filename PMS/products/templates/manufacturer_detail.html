@@ -1,12 +1,43 @@
-<h1>{{ object.name }}</h1>
-<p>Location: {{ object.location }}</p>
-<p>Status: {% if object.active %}Active{% else %}Inactive{% endif %}</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.name }} Details</title>
+</head>
+<body>
+    <h1>{{ object.name }}</h1>
 
-<h2>Products</h2>
-<ul>
-    {% for product in object.product_set.all %}
-        <li>{{ product.name }} - ${{ product.price }}</li>
-    {% empty %}
-        <li>No products available.</li>
-    {% endfor %}
-</ul>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th><p>Location: {{ object.location }}</p></th>
+            </tr>
+            <tr>
+                <th><p>Status: {% if object.active %}Active{% else %}Inactive{% endif %}</p></th>
+            </tr>
+        </thead>
+    </table>
+
+    <h2>Products</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in object.product_set.all %}
+                <tr>
+                    <td>{{ product.name }}</td>
+                    <td>${{ product.price }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="2">No products available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/api/manufacturers/">Back</a>
+</body>
+</html>

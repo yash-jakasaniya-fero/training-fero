@@ -1,6 +1,63 @@
-<h1>Manufacturer List</h1>
-<ul>
-    {% for manufacturer in object_list %}
-        <li><a href="{% url 'manufacturer_detail' manufacturer.id %}">{{ manufacturer.name }}</a> - {{ manufacturer.location }}</li>
-    {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Manufacturer List</h1>
+    <a href="{% url 'manufacturer_create' %}">➕ Add New Manufacturer</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for manufacturer in object_list %}
+            <tr>
+                <td>{{ manufacturer.id }}</td>
+                <td>{{ manufacturer.name }}</td>
+                <td>{{ manufacturer.location }}</td>
+                <td>
+                    {% if manufacturer.active %}
+                        Active
+                    {% else %}
+                        Inactive
+                    {% endif %}
+                </td>
+                <td class="actions">
+                    <a href="{% url 'manufacturer_detail' manufacturer.id %}">View</a>
+                    <a href="{% url 'manufacturer_update' manufacturer.id %}">Edit</a>
+                    <a href="{% url 'manufacturer_delete' manufacturer.id %}">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No manufacturers available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

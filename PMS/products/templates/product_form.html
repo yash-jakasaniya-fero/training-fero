@@ -1,6 +1,48 @@
-<h1>{% if object %}Edit{% else %}Add{% endif %} Product</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if object %}Edit{% else %}Add{% endif %} Product</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        <h1>{% if object %}Edit{% else %}Add{% endif %} Product</h1>
+        {% csrf_token %}
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <td>Name</td>
+                <td>{{ form.name }}</td>
+            </tr>
+            <tr>
+                <td>Manufacturer</td>
+                <td>{{ form.manufacturer }}</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>{{ form.description }}</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>{{ form.price }}</td>
+            </tr>
+            <tr>
+                <td>Shipping Cost</td>
+                <td>{{ form.shipping_cost }}</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>{{ form.quantity }}</td>
+            </tr>
+            <tr>
+                <td>Photo</td>
+                <td>{{ form.photo }}</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </table>
+        <a href="/api/products/">Cancel</a>
+    </form>
+</body>
+</html>

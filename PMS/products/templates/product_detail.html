@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ product.name }}</title>
+    <title>Product Detail</title>
 </head>
 <body>
-    <h1>{{ object.name }}</h1>
-    <p>Manufacturer: {{ object.manufacturer }}</p>
-    <p>Quantity: {{ object.quantity }}</p>
-    <p>Description: {{ object.description }}</p>
-    <p>Price: ${{ object.price }}</p>
-    <p>Shipping Cost: ${{ object.shipping_cost }}</p>
-    {% if object.photo %}
-        <img src="{{ object.photo.url }}" width="200">
+    <h1>Product Detail</h1>
+    <table border="1">
+        <tr>
+            <th>Product Name</th>
+            <td>{{ product.name }}</td>
+        </tr>
+        <tr>
+            <th>Manufacturer</th>
+            <td>{{ product.manufacturer.name }}</td>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td>{{ product.quantity }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ product.description }}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{ product.price }}</td>
+        </tr>
+        <tr>
+            <th>Shipping Cost</th>
+            <td>{{ product.shipping_cost }}</td>
+        </tr>
+    </table>
+    {% if product.photo %}
+        <img src="{{ product.photo.url }}" width="200">
     {% endif %}
+    <a href="/api/products/">Back</a>
 </body>
 </html>
