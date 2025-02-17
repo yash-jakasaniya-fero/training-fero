@@ -4,12 +4,14 @@
     <title>{{ product.name }}</title>
 </head>
 <body>
-    <h1>{{ product.name }}</h1>
-    <p><strong>Manufacturer:</strong> {{ product.manufacturer }}</p>
-    <p><strong>Quantity:</strong> {{ product.quantity }}</p>
-    <p><strong>Description:</strong> {{ product.description }}</p>
-    <p><strong>Price:</strong> ${{ product.price }}</p>
-    <p><strong>Shipping Cost:</strong> ${{ product.shipping_cost }}</p>
-    <img src="{{ object.photo.url }}" alt="product photo">
+    <h1>{{ object.name }}</h1>
+    <p>Manufacturer: {{ object.manufacturer }}</p>
+    <p>Quantity: {{ object.quantity }}</p>
+    <p>Description: {{ object.description }}</p>
+    <p>Price: ${{ object.price }}</p>
+    <p>Shipping Cost: ${{ object.shipping_cost }}</p>
+    {% if object.photo %}
+        <img src="{{ object.photo.url }}" width="200">
+    {% endif %}
 </body>
 </html>

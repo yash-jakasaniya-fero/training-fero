@@ -1,0 +1,6 @@
+<h1>Manufacturer List</h1>
+<ul>
+    {% for manufacturer in object_list %}
+        <li><a href="{% url 'manufacturer_detail' manufacturer.id %}">{{ manufacturer.name }}</a> - {{ manufacturer.location }}</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+<h1>{{ object.name }}</h1>
+<p>Location: {{ object.location }}</p>
+<p>Status: {% if object.active %}Active{% else %}Inactive{% endif %}</p>
+
+<h2>Products</h2>
+<ul>
+    {% for product in object.product_set.all %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+    {% empty %}
+        <li>No products available.</li>
+    {% endfor %}
+</ul>
