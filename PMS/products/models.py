@@ -11,7 +11,7 @@ class Manufacturer(models.Model):
 
 # Product Model
 class Product(models.Model):
-    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.SE)
     name = models.CharField(max_length=120)
     description = models.TextField(blank=True, null=True)
     photo = models.ImageField(upload_to='product_photos/', blank=True, null=True)

@@ -1,0 +1,41 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+pip-log.txt
+pip-delete-this-directory/
+
+# Django
+*.log
+*.pot
+*.py[cod]
+db.sqlite3
+/db.sqlite3-journal
+media
+static
+
+# Environment files
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+.idea/*
+**/migrations/**
+**/**/migrations
+!**/migrations
+!**/migrations/__init__.py
