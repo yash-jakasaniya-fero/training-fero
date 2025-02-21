@@ -14,6 +14,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 
+
 #UsingJobModelSerializer
 #Function-Based Views
 @api_view(['GET', 'POST'])
@@ -95,10 +96,10 @@ class JobDetailAPIView1(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+
 #UsingJobSerializer
 
 # #Function-Based Views
-
 @api_view(['GET', 'POST'])
 def job_list2(request):
     if request.method == 'GET':
@@ -138,7 +139,6 @@ def job_detail2(request, pk):
 
 
 #Class-Based Views
-
 class JobListAPIView2(APIView):
     def get(self, request):
         jobs = Job.objects.all()
@@ -177,14 +177,18 @@ class JobDetailAPIView2(APIView):
         job.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
+#Pagination
 class JobPagination(PageNumberPagination):
     page_size = 2
     page_size_query_param = 'page_size'
 
+
+#Filters
 class JobFilteredListView(generics.ListAPIView):
     queryset = Job.objects.all()
     serializer_class = JobSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ['title', 'company_name', 'location']
-    search_fields = ['title', 'company_name', 'location']
+    search_fields = ['title']
     pagination_class = JobPagination

@@ -9,6 +9,11 @@ class JobModelSerializer(serializers.ModelSerializer):
         model = Job
         fields = '__all__'
 
+    def validate_salary(self, value):
+        if value < 0:
+            raise serializers.ValidationError("Salary cannot be a negative value.")
+        return value
+
 class JobSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     title = serializers.CharField(max_length=255)
@@ -17,6 +22,9 @@ class JobSerializer(serializers.Serializer):
     location = serializers.CharField(max_length=255)
     salary = serializers.IntegerField(required=False, allow_null=True)
     posted_at = serializers.DateTimeField(read_only=True)
+
+    def validate_salary(self, value):
+        return JobModelSerializer().validate_salary(value)
 
     def create(self, validated_data):
         return Job.objects.create(**validated_data)
