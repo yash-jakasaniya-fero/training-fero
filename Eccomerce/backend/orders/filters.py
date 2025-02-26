@@ -18,3 +18,4 @@ class OrderFilters(rest_framework.FilterSet):
         value = value.split(",")
         order_items_ids = list(OrderItem.objects.filter(product__product_name__in=value).values_list('order__id', flat=True))
         return queryset.filter(id__in=order_items_ids)
+
