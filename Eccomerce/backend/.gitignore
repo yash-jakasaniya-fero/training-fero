@@ -1,0 +1,42 @@
+# Python Bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Django-specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+/db.sqlite3
+
+# Django migrations
+*/migrations/
+
+# Virtual environment directories
+venv/
+env/
+.venv/
+.virtualenv/
+
+# Ignore environment variable files
+.env
+
+# Static files (if you're not using git to track static files)
+static/
+
+# Media files (if you're not tracking uploaded user files in Git)
+media/
+
+# Django settings
+settings.py
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
