@@ -1,11 +1,8 @@
-from itertools import product
-from statistics import quantiles
-
 from django.core.validators import MaxValueValidator
 from django.utils.datetime_safe import date
-from .models import Customer, Product, Order, OrderItem
+from orders.models import Customer, Product, Order, OrderItem, Invoice
 from rest_framework import serializers
-from datetime import date
+from datetime import date, datetime
 
 
 # Customer Serializer
@@ -103,3 +100,39 @@ class OrderCreateSerializer(serializers.ModelSerializer):
 
         return data
 
+    def create(self, validated_data):
+        order_items_data = validated_data.pop('order_items')
+        order = Order.objects.create(**validated_data)
+        for item_data in order_items_data:
+            OrderItem.objects.create(order=order, **item_data)
+        return order
+
+#Invoice Validations Serializers
+class InvoiceValidationsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Invoice
+        fields = ['invoice_code', 'date', 'total_price', 'customer_name']
+
+    def validate_invoice_code(self, value):
+        if Invoice.objects.filter(invoice_code=value).exists():
+            raise serializers.ValidationError(f"Invoice with code {value} already exists, try a unique code.")
+        return value
+
+    def validate_date(self, value):
+        if value < date.today():
+            raise serializers.ValidationError("The invoice date cannot be in the past.")
+        return value
+
+    def validate_total_price(self, value):
+        if value <= 0:
+            raise serializers.ValidationError("Total price must be a positive value.")
+        return value
+
+#Invoice Create Serializers
+class InvoiceCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Invoice
+        fields = ['invoice_code', 'date', 'total_price', 'customer_name']
+
+    def create(self, validated_data):
+        return Invoice.objects.create(**validated_data)
