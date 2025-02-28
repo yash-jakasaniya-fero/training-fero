@@ -7,7 +7,10 @@ This repository contains both basic and advanced Python concepts, including Obje
 2. [Advanced Python Concepts](Python/README.md#advanced-python-concepts)
 3. [Object-Oriented Programming (OOP) in Python](Python/README.md#object-oriented-programming-oop-in-python)
 4. [Django ORM Operations](Django%20ORM%20Operations/README.md#section-name)
-5. [Basic Product and Manufacturer Management System in Django](PMS/readme.md)
+5. [Basic Product and Manufacturer Management System in Django](PMS/README.md)
+6. [Django REST Framework (DRF) - Job Board API Task](JobBoardApp/README.md)
+7. [ECOMMERCE PROBLEM STATEMENT with Customers, Products, Orders](Eccomerce/backend/README.md)
+
 
 ---
 
