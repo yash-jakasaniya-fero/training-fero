@@ -19,6 +19,8 @@ This repository contains both basic and advanced Python concepts, including Obje
 
 - Python 3.8 or higher.
 - Django (install via `pip install django`).
+- Django Rest Framework (DRF) (install via `pip install djangorestframework
+`).
 - Database:
   - Default: SQLite (no additional setup needed).
 
