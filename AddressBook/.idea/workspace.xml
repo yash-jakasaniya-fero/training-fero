@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="923da801-ed4e-4da2-abf6-f8a25e59fb7c" name="Changes" comment="" />
+    <list default="true" id="923da801-ed4e-4da2-abf6-f8a25e59fb7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/AddressBook/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/AddressBook/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
